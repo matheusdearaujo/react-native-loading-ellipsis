@@ -1,1 +1,3 @@
-export { default } from "./EllipsisLoading";
+import EllipsisLoading from "./EllipsisLoading";
+
+export default EllipsisLoading;
