@@ -29,6 +29,6 @@
   },
   "homepage": "https://github.com/matheusdearaujo/react-native-loading-ellipsis",
   "devDependencies": {
-    "metro-react-native-babel-preset": "^0.56.0"
+    "metro-react-native-babel-preset": "^0.73.4"
   }
 }
