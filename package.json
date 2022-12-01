@@ -1,6 +1,6 @@
 {
   "name": "@matheusdearaujo/react-native-loading-ellipsis",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A fork of a simple library loading dots component.",
   "main": "src/index.js",
   "keywords": [
