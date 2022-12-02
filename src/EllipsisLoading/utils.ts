@@ -7,7 +7,7 @@ import type {
 } from "./types";
 
 export const initializeDots = (props: InitializeDotsProps) => {
-  const opacities = [];
+  const opacities: Animated.Value[] = [];
   const { numberOfDots, minOpacity } = props;
 
   for (let i = 0; i < numberOfDots; i++) {

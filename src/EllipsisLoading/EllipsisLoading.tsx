@@ -32,10 +32,13 @@ const EllipsisLoading: React.FC = (props: EllipsisLoadingProps) => {
     styleDot.borderRadius = dotSize / 2;
   }
 
-  const s = { ...styleDot, ...(viewStyles as object) };
+  const animatedViewStyle = { ...styleDot, ...(viewStyles as object) };
 
   const dots = animationState.dotOpacities.map((o, i) => (
-    <Animated.View key={`${i}-dot`} style={[{ opacity: o }, s]} />
+    <Animated.View
+      key={`${i}-dot`}
+      style={[{ opacity: o }, animatedViewStyle]}
+    />
   ));
 
   return <View style={[style, styles.container]}>{dots}</View>;
