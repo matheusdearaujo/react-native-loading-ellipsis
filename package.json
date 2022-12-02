@@ -1,6 +1,6 @@
 {
   "name": "@matheusdearaujo/react-native-loading-ellipsis",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "A fork of a simple library loading dots component.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -40,7 +40,9 @@
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "build": "bob build && yarn copy-dts && yarn delete-dts.js",
     "copy-dts": "copyfiles -u 1 \"src/**/*.d.ts\" lib/typescript",
-    "delete-dts.js": "find ./lib/commonjs -name '*.d.js*' -delete && find ./lib/module -name '*.d.js*' -delete"
+    "delete-dts.js": "find ./lib/commonjs -name '*.d.js*' -delete && find ./lib/module -name '*.d.js*' -delete",
+    "postinstall": "nvmrc-check --node $(cat .nvmrc)",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@react-native-community/eslint-config": "^3.2.0",
@@ -53,6 +55,7 @@
     "husky": "^8.0.2",
     "lint-staged": "^13.0.4",
     "metro-react-native-babel-preset": "^0.73.4",
+    "nvmrc-check": "^1.0.2",
     "prettier": "^2.8.0",
     "react-native-builder-bob": "^0.20.1",
     "typescript": "^4.9.3"
