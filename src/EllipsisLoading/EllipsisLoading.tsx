@@ -5,7 +5,7 @@ import { initializeDots, animateDots } from "./utils";
 import type { EllipsisLoadingProps, AnimationStateProps } from "./types";
 import { styles } from "./styles";
 
-const EllipsisLoading = (props: EllipsisLoadingProps) => {
+const EllipsisLoading: React.FC = (props: EllipsisLoadingProps) => {
   const [animationState, setAnimationState] = useState<AnimationStateProps>({
     dotOpacities: initializeDots({ ...DEFAULT_PROPS, ...props }),
     targetOpacity: 1,
