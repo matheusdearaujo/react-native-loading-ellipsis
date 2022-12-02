@@ -2,7 +2,14 @@
   "name": "@matheusdearaujo/react-native-loading-ellipsis",
   "version": "1.0.1",
   "description": "A fork of a simple library loading dots component.",
-  "main": "src/index.js",
+  "main": "lib/commonjs/index",
+  "module": "lib/module/index",
+  "types": "lib/typescript/index.d.ts",
+  "react-native": "src/index.ts",
+  "files": [
+    "src",
+    "lib"
+  ],
   "keywords": [
     "react-native",
     "react-component",
@@ -28,7 +35,35 @@
     "url": "https://github.com/matheusdearaujo/react-native-loading-ellipsis/issues"
   },
   "homepage": "https://github.com/matheusdearaujo/react-native-loading-ellipsis",
+  "scripts": {
+    "typescript": "tsc --skipLibCheck --noEmit",
+    "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "build": "bob build && yarn copy-dts && yarn delete-dts.js",
+    "copy-dts": "copyfiles -u 1 \"src/**/*.d.ts\" lib/typescript",
+    "delete-dts.js": "find ./lib/commonjs -name '*.d.js*' -delete && find ./lib/module -name '*.d.js*' -delete"
+  },
   "devDependencies": {
-    "metro-react-native-babel-preset": "^0.73.4"
+    "@react-native-community/eslint-config": "^3.2.0",
+    "@types/react": "^18.0.25",
+    "@types/react-native": "^0.70.7",
+    "copyfiles": "^2.4.1",
+    "eslint": "^8.28.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.4",
+    "metro-react-native-babel-preset": "^0.73.4",
+    "prettier": "^2.8.0",
+    "react-native-builder-bob": "^0.20.1",
+    "typescript": "^4.9.3"
+  },
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      "typescript"
+    ]
   }
 }
