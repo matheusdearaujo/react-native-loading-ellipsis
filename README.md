@@ -19,21 +19,19 @@ A fork of a [simple library loading dots component](https://github.com/JanidHam/
 
 
 ## Installation
-If using npm:
-
+npm:
 ```
 npm install --save @matheusdearaujo/react-native-loading-ellipsis
 ```
 
-If using yarn:
-
+yarn:
 ```
 yarn add @matheusdearaujo/react-native-loading-ellipsis
 ```
 
 ## Usage
 ```js
-import EllipsisLoading from '@matheusdearaujo/react-native-loading-ellipsis'
+import EllipsisLoading from "@matheusdearaujo/react-native-loading-ellipsis"
 ```
 
 Simply place a `<EllipsisLoading />` inside of any compnent.
@@ -47,12 +45,15 @@ Simply place a `<EllipsisLoading />` inside of any compnent.
 ### Styling Usage
 EllipsisLoading is fully customizable using the `styleDot, animationDelay, numberOfDots, minOpacity, and dotSize` props.
 
-Example usage to change dots color:
+Example usage to change dots color and spacing (as preview):
 
 ```js
 <View style={{ flex: 1 }}>
     <EllipsisLoading
-        styleDot={{ backgroundColor: "#000000" }}
+        styleDot={{
+          backgroundColor: "#6c5ce7",
+          margin: 5,
+        }}
     />
 </View>
 ```
