@@ -50,7 +50,7 @@ EllipsisLoading is fully customizable using the `styleDot, animationDelay, numbe
 Example usage to change dots color:
 
 ```js
-<View style={{flex: 1}}>
+<View style={{ flex: 1 }}>
     <EllipsisLoading
         styleDot={{ backgroundColor: "#000000" }}
     />
