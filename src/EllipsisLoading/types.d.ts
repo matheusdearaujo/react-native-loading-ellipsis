@@ -11,12 +11,15 @@ export interface EllipsisLoadingProps {
     Pick<
       ViewStyle,
       | "backgroundColor"
-      | "marginRight"
-      | "marginLeft"
-      | "marginTop"
-      | "marginBottom"
-      | "marginVertical"
+      | "margin"
+      | "marginEnd"
       | "marginHorizontal"
+      | "marginLeft"
+      | "marginRight"
+      | "marginStart"
+      | "marginTop"
+      | "marginVertical"
+      | "marginBottom"
     >
   >;
 
