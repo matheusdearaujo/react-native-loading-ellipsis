@@ -24,7 +24,7 @@ const EllipsisLoading = (props: EllipsisLoadingProps) => {
   });
 
   const { style, styleDot } = DEFAULT_PROPS;
-  const { styleDot: sDot, dotSize } = props;
+  const { styleDot: viewStyles, dotSize } = props;
 
   if (dotSize) {
     styleDot.width = dotSize;
@@ -32,7 +32,7 @@ const EllipsisLoading = (props: EllipsisLoadingProps) => {
     styleDot.borderRadius = dotSize / 2;
   }
 
-  const s = { ...styles.dotDefault, ...styleDot, sDot };
+  const s = { ...styles.dotDefault, ...styleDot, viewStyles };
 
   const dots = animationState.dotOpacities.map((o, i) => (
     <Animated.View key={`${i}-dot`} style={[{ opacity: o }, s]} />

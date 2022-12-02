@@ -1,4 +1,5 @@
 import type { ViewStyle, StyleProp } from "react-native";
+import { Animated } from "react-native";
 
 export interface EllipsisLoadingProps {
   /**
