@@ -23,7 +23,7 @@ export interface EllipsisLoadingProps {
   /**
    * Delay for animation in milliseconds.
    * @type number
-   * @default 300
+   * @default 150
    */
   animationDelay?: number;
 
@@ -35,14 +35,14 @@ export interface EllipsisLoadingProps {
   numberOfDots?: number;
 
   /**
-   * 	Opacity of dot animation.
+   * Opacity of dot animation. Value between 0 and 1.
    * @type number
    * @default 0.2
    */
   minOpacity?: number;
 
   /**
-   * 	Size of the dots.
+   * Size of the dots.
    * @type number
    * @default 12
    */
@@ -57,7 +57,7 @@ export interface InitializeDotsProps {
   numberOfDots: number;
 
   /**
-   * 	Opacity of dot animation.
+   * Opacity of dot animation.
    * @type number
    */
   minOpacity: number;
@@ -82,7 +82,7 @@ export interface AnimationStateProps {
 
 export interface AnimateDotsProps {
   /**
-   * 	Opacity of dot animation.
+   * Opacity of dot animation.
    * @type number
    */
   minOpacity: number;
