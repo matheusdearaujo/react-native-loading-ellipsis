@@ -50,16 +50,11 @@ EllipsisLoading is fully customizable using the `styleDot, animationDelay, numbe
 Example usage to change dots color:
 
 ```js
-const styleDot = {
-    backgroundColor: '#000000',
-    marginRight: 3,
-};
-
-return (
-    <View style={{flex: 1}}>
-        <EllipsisLoading styleDot={styleDot} />
-    </View>
-)
+<View style={{flex: 1}}>
+    <EllipsisLoading
+        styleDot={{ backgroundColor: "#000000" }}
+    />
+</View>
 ```
 
 ## Documentation
@@ -67,10 +62,10 @@ return (
 ### EllipsisLoading Component
 | Name                      | Description                              | Default     | Type   |
 |---------------------------|------------------------------------------|-------------|--------|
-| styleDot                  | Dot styles                               | Object      | Object |
+| styleDot                  | Dot styles                               | undefined      | ViewStyle |
 | animationDelay            | Delay for animation in milliseconds      | 300         | Number |
 | numberOfDots              | Number of dot to display                 | 3           | Number |
-| minOpacity                | Opacity of dot animatino                 | 0.2         | Number |
+| minOpacity                | Opacity of dot animation                 | 0.2         | Number |
 | dotSize                   | Size of the dots                         | 12          | Number |
 
 ## How to contribute
