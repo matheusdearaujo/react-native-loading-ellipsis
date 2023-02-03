@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
+import type { EllipsisLoadingProps, AnimationStateProps } from "./types";
 import { Animated, View } from "react-native";
 import { DEFAULT_PROPS } from "./constants";
-import { initializeDots, animateDots } from "./utils";
-import type { EllipsisLoadingProps, AnimationStateProps } from "./types";
+import { useEllipsisLoading } from "./utils";
 import { styles } from "./styles";
 
-const EllipsisLoading: React.FC = (props: EllipsisLoadingProps) => {
+const EllipsisLoading = (props: EllipsisLoadingProps) => {
+  const { initializeDots, animateDots } = useEllipsisLoading();
+
   const [animationState, setAnimationState] = useState<AnimationStateProps>({
     dotOpacities: initializeDots({ ...DEFAULT_PROPS, ...props }),
     targetOpacity: 1,
@@ -18,10 +20,13 @@ const EllipsisLoading: React.FC = (props: EllipsisLoadingProps) => {
       ...props,
     });
 
-    return function cleanup() {
-      setAnimationState({ ...animationState, shouldAnimate: false });
+    return () => {
+      setAnimationState(prev => ({
+        ...prev,
+        shouldAnimate: false,
+      }));
     };
-  });
+  }, [animationState, props, animateDots]);
 
   const { style, styleDot } = DEFAULT_PROPS;
   const { styleDot: viewStyles, dotSize } = props;
