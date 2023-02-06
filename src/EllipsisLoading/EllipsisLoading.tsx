@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from "react";
-import type { EllipsisLoadingProps, AnimationStateProps } from "./types";
+import type {
+  EllipsisLoadingComponent,
+  EllipsisLoadingProps,
+  AnimationStateProps,
+} from "./types";
 import { Animated, View } from "react-native";
 import { DEFAULT_PROPS } from "./constants";
 import { useEllipsisLoading } from "./utils";
 import { styles } from "./styles";
 
-const EllipsisLoading = (props: EllipsisLoadingProps) => {
+const EllipsisLoading: EllipsisLoadingComponent = (
+  props: EllipsisLoadingProps,
+) => {
   const { initializeDots, animateDots } = useEllipsisLoading();
 
   const [animationState, setAnimationState] = useState<AnimationStateProps>({
@@ -26,7 +32,8 @@ const EllipsisLoading = (props: EllipsisLoadingProps) => {
         shouldAnimate: false,
       }));
     };
-  }, [animationState, props, animateDots]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const { style, styleDot } = DEFAULT_PROPS;
   const { styleDot: viewStyles, dotSize } = props;

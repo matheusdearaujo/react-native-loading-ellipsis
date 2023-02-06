@@ -52,6 +52,10 @@ export interface EllipsisLoadingProps {
   dotSize?: number;
 }
 
+export type EllipsisLoadingComponent = (
+  props: EllipsisLoadingProps,
+) => JSX.Element;
+
 export interface InitializeDotsProps {
   /**
    * Number of dot to display.
