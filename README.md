@@ -21,12 +21,12 @@ A fork of a [simple library loading dots component](https://github.com/JanidHam/
 ## Installation
 npm:
 ```
-npm install --save @mxtheussouza/react-native-loading-ellipsis
+npm install --save @matheusdearaujo/react-native-loading-ellipsis
 ```
 
 yarn:
 ```
-yarn add @mxtheussouza/react-native-loading-ellipsis
+yarn add @matheusdearaujo/react-native-loading-ellipsis
 ```
 
 ## Usage
