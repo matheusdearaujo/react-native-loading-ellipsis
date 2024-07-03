@@ -1,11 +1,11 @@
 # React Native Loading Ellipsis
 
 <div>
-    <a href="https://github.com/matheusdearaujo/react-native-loading-ellipsis/issues">
-        <img src="https://img.shields.io/github/issues/matheusdearaujo/react-native-loading-ellipsis">
+    <a href="https://github.com/mxtheussouza/react-native-loading-ellipsis/issues">
+        <img src="https://img.shields.io/github/issues/mxtheussouza/react-native-loading-ellipsis">
     </a>
-    <a href="https://github.com/matheusdearaujo/react-native-loading-ellipsis/pulls">
-        <img src="https://img.shields.io/github/issues-pr/matheusdearaujo/react-native-loading-ellipsis">
+    <a href="https://github.com/mxtheussouza/react-native-loading-ellipsis/pulls">
+        <img src="https://img.shields.io/github/issues-pr/mxtheussouza/react-native-loading-ellipsis">
     </a>
 </div>
 
@@ -21,12 +21,12 @@ A fork of a [simple library loading dots component](https://github.com/JanidHam/
 ## Installation
 npm:
 ```
-npm install --save @matheusdearaujo/react-native-loading-ellipsis
+npm install --save @mxtheussouza/react-native-loading-ellipsis
 ```
 
 yarn:
 ```
-yarn add @matheusdearaujo/react-native-loading-ellipsis
+yarn add @mxtheussouza/react-native-loading-ellipsis
 ```
 
 ## Usage
@@ -73,10 +73,10 @@ Example usage to change dots color and spacing (as preview):
 Read our [contribution](/CONTRIBUTING.md) guide.
 
 ## Contributors
-<a href="https://github.com/matheusdearaujo/react-native-loading-ellipsis/graphs/contributors"><img src="https://contrib.rocks/image?repo=matheusdearaujo/react-native-loading-ellipsis" /></a>
+<a href="https://github.com/mxtheussouza/react-native-loading-ellipsis/graphs/contributors"><img src="https://contrib.rocks/image?repo=mxtheussouza/react-native-loading-ellipsis" /></a>
 
 ## Author
-| [<img src="https://avatars.githubusercontent.com/u/61164981?v=3&s=115"><br><sub>@matheusdearaujo</sub>](https://github.com/matheusdearaujo) |
+| [<img src="https://avatars.githubusercontent.com/u/61164981?v=3&s=115"><br><sub>@mxtheussouza</sub>](https://github.com/mxtheussouza) |
 | :-----------------------------------------------------------------------------------------------------------------------------------------: |
 
 ## LICENSE
